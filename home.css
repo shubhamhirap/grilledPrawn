@@ -1,0 +1,743 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.commanText {
+  font-size: 1.8rem;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: relative;
+}
+
+input[type="checkbox"]:not(:checked) + label,
+input[type="checkbox"]:checked + label {
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="checkbox"]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="checkbox"]:checked + label:after {
+  content: "✔";
+  position: absolute;
+  top: 8px;
+  left: -3.1rem;
+  font-size: 2rem;
+  line-height: 0.8;
+  color: #000;
+  transition: all 0.2s;
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+option {
+  font-weight: 500;
+}
+
+.container,
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.header__wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brand {
+  flex: 1;
+}
+
+.header__brandWrapper {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+}
+
+.header__brandWrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__nav {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.3px;
+  color: #4a4a4a;
+}
+
+.banner {
+  width: 100%;
+  height: 540px;
+  display: flex;
+}
+
+.banner__imageContainer {
+  height: 100%;
+  flex: 5;
+}
+
+.banner__imageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner__imageWrapper img {
+  width: 135%;
+  height: 100%;
+}
+
+.banner__recipeDescription {
+  flex: 2;
+  background-color: #e9474b;
+  padding: 4rem 3.5rem 3.5rem 3.5rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.banner__recipeDescription .latest_recipe,
+.recipe_title,
+.recipe_description {
+  color: #fff;
+}
+
+.banner__recipeDescription .latest_recipe {
+  font-size: 1.8rem;
+  line-height: 2.109rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.2rem;
+}
+
+.banner__recipeDescription .recipe_title {
+  font-size: 4rem;
+  line-height: 5.447rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 1rem;
+}
+
+.banner__recipeDescription .recipe_description {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 3.3rem;
+}
+
+.banner__recipeDescription .recipeButton {
+  width: 50%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+.banner__recipeDescription .recipeButton .recipeButton__wrapper .button_title {
+  font-size: 1.8rem;
+  line-height: 2.109rem;
+  letter-spacing: 0.13px;
+  color: #4a4a4a;
+  margin-right: 0.6rem;
+}
+
+.banner__recipeDescription
+  .recipeButton
+  .recipeButton__wrapper
+  .right_icon
+  img {
+  width: 1.6rem;
+  height: 1rem;
+}
+
+/* recipe */
+
+.recipe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+
+.recipe .recipeWrapper {
+  width: 90%;
+}
+
+.recipe .recipeWrapper .recipeWrapper__title {
+  font-size: 4rem;
+  line-height: 4.688rem;
+  letter-spacing: 0.03rem;
+  margin: 5rem 0 4rem 0;
+}
+
+.recipe .recipeWrapper .recipeWrapper__tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe .recipeWrapper .recipeWrapper__tabs .recipeWrapper__tabsSearch {
+  color: #4a4a4a;
+}
+
+.recipe .recipeWrapper .recipeWrapper__tabs .recipeWrapper__tabsFilterSort {
+  display: flex;
+  align-items: center;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__tabs
+  .recipeWrapper__tabsFilterSort
+  button {
+  width: 26.9rem;
+  padding: 1.5rem 1.5rem 3.5rem 1.5rem;
+  border: none;
+  background-color: #e9474b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__tabs
+  .recipeWrapper__tabsFilterSort
+  .recipeWrapper__tabSort {
+  margin-left: 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__tabs
+  .recipeWrapper__tabsFilterSort
+  .recipeWrapper__tabSort
+  span {
+  position: relative;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__tabs
+  .recipeWrapper__tabsFilterSort
+  .recipeWrapper__tabSort
+  span
+  img {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__tabs
+  .recipeWrapper__tabsFilterSort
+  .recipeWrapper__tabSort
+  span
+  select {
+  width: 19.2rem;
+  height: 5rem;
+  padding: 1.5rem 1.5rem 1.4rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.109rem;
+  letter-spacing: 0.014rem;
+  appearance: none;
+}
+
+.recipe .recipeWrapper .recipeWrapper__filterOptions {
+  display: none;
+}
+
+.recipe .recipeWrapper .recipeWrapper__filterOptions {
+  height: 20rem;
+  margin-bottom: 5rem;
+  background-color: #e9474b;
+  padding: 3.5rem;
+  gap: 2.7rem;
+}
+
+.recipe .recipeWrapper .recipeWrapper__filterOptions .filterOptions__foodType {
+  border-right: 1px solid #fff;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__filterOptions
+  .filterOptions__foodType
+  .filterOptions__foodTypeTitle,
+.filterOptions__nationality .filterOptions__nationalityTitle {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.344rem;
+  letter-spacing: 0.015rem;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.014rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__filterOptions
+  .filterOptions__nationality {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__filterOptions
+  .filterOptions__nationality
+  .filterOptions__nationalityOptions {
+  display: flex;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__filterOptions
+  .filterOptions__nationality
+  .filterOptions__nationalityOptions
+  .nationality_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.recipe .recipeWrapper .recipeWrapper__cards {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.1rem;
+}
+
+.recipe .recipeWrapper .recipeWrapper__cards .recipeWrapper__card {
+  width: 28rem;
+  height: 42rem;
+  background-color: #fff;
+  margin-bottom: 6rem;
+}
+
+.recipe .recipeWrapper .recipeWrapper__cards .recipeWrapper__card .cardTop {
+  height: 15.3rem;
+  padding: 2.8rem 1.6rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardTop
+  .cardTop__dateNation {
+  margin-bottom: 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardTop
+  .cardTop__dateNation
+  .date,
+.nationality {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.406rem;
+  font-weight: 500;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardTop
+  .cardTop__dateNation
+  .date {
+  letter-spacing: 0.039px;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardTop
+  .cardTop__dateNation
+  .nationality {
+  letter-spacing: 0.009px;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardTop
+  .cardTop__title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 2.93rem;
+  letter-spacing: 0.019rem;
+}
+
+.recipe .recipeWrapper .recipeWrapper__cards .recipeWrapper__card .cardImg {
+  height: 26.6rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardImg
+  .cardImg__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__cards
+  .recipeWrapper__card
+  .cardImg
+  .cardImg__wrapper
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+.recipe .recipeWrapper .recipeWrapper__instruction {
+  margin: 4.6rem 0 5.6rem 0;
+  color: #e9474b;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recipe
+  .recipeWrapper
+  .recipeWrapper__instruction
+  .recipeWrapper__instructionTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.109rem;
+  letter-spacing: 0.019rem;
+}
+
+/* newsletter */
+
+.newsletter {
+  background-color: #e9474b;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter .newsletterWrapper {
+  width: 90%;
+  margin: 6.2rem 0 5rem 0;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__title {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 4.688rem;
+  letter-spacing: 0.052rem;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__description {
+  width: 40%;
+  margin: 1.6rem 0 3.3rem 0;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__description p {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__form {
+  margin: 3rem 0;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__formFields,
+.newsletterWrapper__buttonIcon {
+  flex: 1;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__formFields
+  label {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__formFields
+  input {
+  padding: 0 0.5rem;
+  outline: none;
+  border-radius: 4px;
+  height: 5rem;
+  font-size: 1.8rem;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+  border: 1px solid black;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__buttonIcon {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__buttonIcon
+  .newsletterWrapper__buttonIconRemove {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1.4rem;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__buttonIcon
+  .newsletterWrapper__buttonIconRemove
+  .deleteIconContainer {
+  width: 1.2rem;
+  height: 1.8rem;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__buttonIcon
+  .newsletterWrapper__buttonIconRemove
+  .deleteIconContainer
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__buttonIcon
+  .newsletterWrapper__buttonIconRemove
+  .deleteTitle {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+}
+
+.newsletter
+  .newsletterWrapper
+  .newsletterWrapper__form
+  .newsletterWrapper__formWrapper
+  .newsletterWrapper__buttonIcon
+  button {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+  padding: 1.5rem 5.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__sendButton {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__sendButton button {
+  padding: 1.5rem 5.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+}
+
+.newsletter .newsletterWrapper .newsletterWrapper__sendButton button span img {
+  width: 1.2rem;
+  height: 1rem;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 7.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footerWrapper {
+  width: 90%;
+  display: flex;
+  gap: 10rem;
+}
+
+.footer .footerWrapper .footerWrapper__footerList {
+  flex: 6;
+  display: flex;
+  gap: 3rem;
+}
+
+.footer
+  .footerWrapper
+  .footerWrapper__footerList
+  .footerWrapper__footerListRecipes,
+.footerWrapper__footerListHistory,
+.footerWrapper__footerListTips,
+.footerWrapper__footerListContact {
+  flex: 1;
+}
+
+.footerListTitle {
+  margin-bottom: 2.4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.344rem;
+  letter-spacing: 0.026rem;
+}
+
+.footerListDescription {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.641rem;
+  letter-spacing: 0.018rem;
+}
+
+.footerListDescription span a {
+  color: #e9474b;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.641rem;
+  letter-spacing: 0.018rem;
+}
+.footer .footerWrapper .footerWrapper__copyright {
+  flex: 2;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2.109rem;
+  letter-spacing: 0.023rem;
+}

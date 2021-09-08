@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <title>Grilled Prawn</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+          <div class="header__wrapper">
+            <div class="header__brand">
+              <div class="header__brandWrapper">
+                <img src="./assets/icons/Bitmap.png" alt="logo" />
+              </div>
+            </div>
+            <nav class="header__nav">
+              <a href="#">RECIPES</a>
+              <a href="#">DRINKS</a>
+              <a href="#">DECORATIONS</a>
+              <a href="#">ABOUT THE GRILLED PRAWN</a>
+            </nav>
+          </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Banner Start -->
+        <section class="banner">
+          <div class="banner__imageContainer">
+            <div class="banner__imageWrapper">
+              <img
+                src="./assets/images/bakled-polenta-with-italian-sausage.png"
+                alt="Baked polenta with italian sausage"
+              />
+            </div>
+          </div>
+          <div class="banner__recipeDescription">
+            <span class="latest_recipe">LATEST RECIPE</span>
+            <p class="recipe_title">Baked Polenta With Cheese and Mushrooms.</p>
+            <p class="recipe_description">
+              Polenta, goat cheese, Italian sausage, and cremini mushrooms. All
+              together this will make for pretty darn good side dish to a lovely
+              salad. Go for it.
+            </p>
+
+            <button class="recipeButton">
+              <div class="recipeButton__wrapper">
+                <span class="button_title">Go to recipe</span>
+                <span class="right_icon">
+                  <img
+                    src="./assets/icons/arrow_right.png"
+                    alt="right arrow icon"
+                  />
+                </span>
+              </div>
+            </button>
+          </div>
+        </section>
+        <!-- Banner End -->
+
+        <!-- Recipe Start -->
+
+        <section class="recipe">
+          <div class="recipeWrapper">
+            <div class="recipeWrapper__title">Our Recipes</div>
+
+            <div class="recipeWrapper__tabs">
+              <div class="recipeWrapper__tabsFilterSort">
+                <button
+                  class="recipeWrapper__tabFilter"
+                  onclick="filterVisibilty()"
+                >
+                  <span class="commanText bold">Filter recipes by</span>
+                  <span>
+                    <img
+                      src="./assets/icons/minimize.png"
+                      alt="minimize icon"
+                    />
+                  </span>
+                </button>
+                <div class="recipeWrapper__tabSort">
+                  <span class="commanText">Sort by</span>
+                  <span>
+                    <select name="sortOptions" id="sortOptions">
+                      <option class="commanText" value="newestFirst">
+                        Newest first
+                      </option>
+                      <option class="commanText" value="oldestFirst">
+                        Oldest first
+                      </option>
+                    </select>
+                    <img
+                      src="./assets/icons/downArrow.png"
+                      alt="dropdown arrow"
+                    />
+                  </span>
+                </div>
+              </div>
+              <div class="recipeWrapper__tabsSearch commanText bold">
+                Search recipe
+              </div>
+            </div>
+
+            <div class="recipeWrapper__filterOptions">
+              <div class="filterOptions__foodType">
+                <div class="filterOptions__foodTypeTitle">Food type:</div>
+                <div class="inputGroup">
+                  <img src="./assets/icons/Oval.png" alt="circular checkbox" />
+                  <input type="checkbox" name="foodtype" id="appetisers" />
+                  <label for="appetisers">Appetisers</label>
+                </div>
+                <div class="inputGroup">
+                  <img src="./assets/icons/Oval.png" alt="circular checkbox" />
+                  <input type="checkbox" name="foodtype" id="mains" checked />
+                  <label for="mains">Mains</label>
+                </div>
+                <div class="inputGroup">
+                  <img src="./assets/icons/Oval.png" alt="circular checkbox" />
+                  <input type="checkbox" name="foodtype" id="desserts" />
+                  <label for="desserts">Desserts</label>
+                </div>
+                <div class="inputGroup">
+                  <img src="./assets/icons/Oval.png" alt="circular checkbox" />
+                  <input
+                    type="checkbox"
+                    name="foodtype"
+                    id="specialOccasions"
+                  />
+                  <label for="specialOccasions">Special Occasions</label>
+                </div>
+              </div>
+              <div class="filterOptions__nationality">
+                <div class="filterOptions__nationalityTitle">Nationality:</div>
+                <div class="filterOptions__nationalityOptions">
+                  <div class="nationality_column">
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="italian" />
+                      <label for="italian">Italian (34)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input
+                        type="checkbox"
+                        name="nationality"
+                        id="french"
+                        checked
+                      />
+                      <label for="french">French (30)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input
+                        type="checkbox"
+                        name="nationality"
+                        id="spanish"
+                        checked
+                      />
+                      <label for="spanish">Spanish (22)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="peruvian" />
+                      <label for="peruvian">Peruvian (3)</label>
+                    </div>
+                  </div>
+
+                  <div class="nationality_column">
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="chinese" />
+                      <label for="chinese">Chinese (18)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="indian" />
+                      <label for="indian">Indian (13)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input
+                        type="checkbox"
+                        name="nationality"
+                        id="thai"
+                        checked
+                      />
+                      <label for="thai">Thai (22)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input
+                        type="checkbox"
+                        name="nationality"
+                        id="norwegian"
+                      />
+                      <label for="norwegian">Norwegian (4)</label>
+                    </div>
+                  </div>
+
+                  <div class="nationality_column">
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="polish" />
+                      <label for="polish">Polish (2)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input
+                        type="checkbox"
+                        name="nationality"
+                        id="danish"
+                        checked
+                      />
+                      <label for="danish">Danish (3)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="belgian" />
+                      <label for="belgian">Belgian (7)</label>
+                    </div>
+                    <div class="inputGroup">
+                      <img
+                        src="./assets/icons/Oval.png"
+                        alt="circular checkbox"
+                      />
+                      <input type="checkbox" name="nationality" id="persian" />
+                      <label for="persian">Persian (13)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="recipeWrapper__cards">
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 5th march 2017 </span>
+                    <span class="nationality"> thai </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Thai Yellow Curry Noodles with Shiitake Mushrooms
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Thai_yellow_curry_noodles.png"
+                      alt="Thai yellow curry noodles"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 17TH MARCH 2016 </span>
+                    <span class="nationality"> Italian </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Cappellini with Cherry Tomatoes and Fresh Basil
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Italian_Cappellini.png"
+                      alt="Italian Cappellini"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 4TH APRIL 2016 </span>
+                    <span class="nationality"> ITALIAN </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Baked Turkey Sausage and Mascarpone Stuffed Shells
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Italian_Baked_Turkey_Sausage.png"
+                      alt="Italian Baked Turkey Sausage"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 24TH MAY 2016 </span>
+                    <span class="nationality"> italian </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Caramelised Apple and Herb Fiocchi
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Italian_Caramelised_Apple.png"
+                      alt="Italian Caramelised Apple"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 25TH MAY 2016 </span>
+                    <span class="nationality"> spanish </span>
+                  </div>
+                  <div class="cardTop__title">Pumpkin Beer Cheese Soup</div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Spanish_Pumkin_Beer_Cheese_Soup.png"
+                      alt="Spanish Pumkin Beer Cheese Soup"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 22TH SEPTEMBER 2016 </span>
+                    <span class="nationality"> thai </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Yum Woon Sen with Shrimp (Glass noodle salad with Shrimp)
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Thai_Yum_Woon_Sen.png"
+                      alt="Thai Yum Woon Sen"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 14TH OCTOBER 2016 </span>
+                    <span class="nationality"> thai </span>
+                  </div>
+                  <div class="cardTop__title">Beef Satay</div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Thai_Beef_Satay.png"
+                      alt="Thai beef satay"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 29TH OCTOBER 2016 </span>
+                    <span class="nationality"> french </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Creamy French Onion Soup Dip in a Bread Bowl
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/French_Creamy_French_Onion_Soup.png"
+                      alt="creamy french Onion soup"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 11TH NOVEMBER 2016 </span>
+                    <span class="nationality"> SPANISH </span>
+                  </div>
+                  <div class="cardTop__title">Bocadillo Bites</div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Spanish_Bocadillo_Bites.png"
+                      alt="spanish bocadillo bites"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 12TH NOVEMBER 2016 </span>
+                    <span class="nationality"> spanish </span>
+                  </div>
+                  <div class="cardTop__title">Paella</div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Spanish_Pealla.png"
+                      alt="spanish Paella"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 24TH DECEMBER 2016 </span>
+                    <span class="nationality"> thai </span>
+                  </div>
+                  <div class="cardTop__title">Spicy black Bean Burger</div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Thai_Spicy_black_Bean_Burger.png"
+                      alt="black bean Burger"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipeWrapper__card">
+                <div class="cardTop">
+                  <div class="cardTop__dateNation">
+                    <span class="date"> 9TH JANUARY 2017 </span>
+                    <span class="nationality"> italian </span>
+                  </div>
+                  <div class="cardTop__title">
+                    Fresh Fig and Pistachio Salad
+                  </div>
+                </div>
+                <div class="cardImg">
+                  <div class="cardImg__wrapper">
+                    <img
+                      src="./assets/images/Italian_Fresh_Fig_and_Pistachio_Salad.png"
+                      alt="fig and pisstachio salad"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="recipeWrapper__instruction">
+              <span class="recipeWrapper__instructionTitle"
+                >Return to the top</span
+              >
+              <span
+                ><img src="./assets/icons/upArrow.png" alt="up arrow"
+              /></span>
+            </p>
+          </div>
+        </section>
+        <!-- Recipe End -->
+
+        <!-- NewsLetter Start -->
+
+        <section class="newsletter">
+          <div class="newsletterWrapper">
+            <div class="newsletterWrapper__title">Spread the word!</div>
+            <div class="newsletterWrapper__description">
+              <p>
+                Our recipes are awesome, sign up to our newsletter and invite
+                friends to join the Gilled Prawn cult
+              </p>
+            </div>
+
+            <div class="newsletterWrapper__form">
+              <form class="newsletterWrapper__formWrapper">
+                <div class="newsletterWrapper__formFields">
+                  <label for="name">Name</label>
+                  <input type="text" id="placeholderName" />
+                </div>
+                <div class="newsletterWrapper__formFields">
+                  <label for="surname">Surname</label>
+                  <input type="text" id="placeholderSurname" />
+                </div>
+                <div class="newsletterWrapper__formFields">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="placeholderEmail" />
+                </div>
+                <div class="newsletterWrapper__buttonIcon">
+                  <div class="newsletterWrapper__buttonIconRemove">
+                    <span class="deleteIconContainer">
+                      <img src="./assets/icons/delete.png" alt="delete icon" />
+                    </span>
+                    <span class="deleteTitle"> Remove </span>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <hr />
+
+            <div class="newsletterWrapper__form">
+              <form
+                id="newsletter_form"
+                class="newsletterWrapper__formWrapper"
+                action="#"
+              >
+                <div class="newsletterWrapper__formFields">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" onblur="getVal()" />
+                </div>
+                <div class="newsletterWrapper__formFields">
+                  <label for="surname">Surname</label>
+                  <input
+                    type="text"
+                    id="surname"
+                    name="surname"
+                    onblur="getVal()"
+                  />
+                </div>
+                <div class="newsletterWrapper__formFields">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    onblur="getVal()"
+                  />
+                </div>
+                <div class="newsletterWrapper__buttonIcon">
+                  <button type="submit" onclick="handleForm();return false;">
+                    Add Friend
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="newsletterWrapper__sendButton">
+              <button>
+                Send
+                <span
+                  ><img src="./assets/icons/arrow_right.png" alt="right arrow"
+                /></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- NewsLetter End -->
+
+        <!-- Footer start -->
+        <section class="footer">
+          <div class="footerWrapper">
+            <div class="footerWrapper__footerList">
+              <div class="footerWrapper__footerListRecipes">
+                <div class="footerListTitle">Our Recipes</div>
+                <div class="footerListDescription">
+                  All our recipes are tested thoroughly by us to make sure
+                  they’re suitable for your kitchen at home. We know many of you
+                  are concerned about healthy eating, so we send them to a
+                  qualified nutritionist for thorough analysis too.
+                  <span><a href="#">Browse our recipes now</a></span>
+                </div>
+              </div>
+              <div class="footerWrapper__footerListHistory">
+                <div class="footerListTitle">Grilled Praw’s History</div>
+                <div class="footerListDescription">
+                  The Grilled Prawn is a fictional food blog created in January
+                  2015.
+                </div>
+              </div>
+              <div class="footerWrapper__footerListTips">
+                <div class="footerListTitle">Tips and Tricks</div>
+                <div class="footerListDescription">
+                  Not sure how to do something? Don’t panic. We have plenty of
+                  tutorials for you. <span><a href="#">Learn more</a></span>
+                </div>
+              </div>
+              <div class="footerWrapper__footerListContact">
+                <div class="footerListTitle">Help and Contact</div>
+                <div class="footerListDescription">
+                  Struggling with one of the recipes?
+                  <span><a href="#">Send us an email</a></span>
+                  We are always happy to try new things, send us your
+                  suggestions!
+                  <span><a href="#">Fill in the form</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="footerWrapper__copyright">
+              © The Grilled Prawn Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed imperdiet, lectus quis interdum viverra, erat
+              mi consectetur mi, a fringilla odio risus vel augue. Mauris tempor
+              ligula fringilla magna iaculis, non vulputate tellus interdum. The
+              images and recipes ideas were taken from spoonforkbacon.com and
+              the icons from Google Material Icons.
+            </div>
+          </div>
+        </section>
+        <!-- Footer End -->
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const filterVisibilty = () => {
+      let filterOptions = document.getElementsByClassName(
+        "recipeWrapper__filterOptions"
+      )[0];
+
+      if (filterOptions.style.display) {
+        filterOptions.style.display =
+          filterOptions.style.display != "none" ? "none" : "flex";
+      } else {
+        filterOptions.style.display = "flex";
+      }
+    };
+
+    const handleForm = () => {
+      console.log(document.getElementById("newsletter").submit());
+    };
+
+    const getVal = () => {
+      let name = document.querySelector("#name").value;
+      let surname = document.querySelector("#surname").value;
+      let email = document.querySelector("#email").value;
+      
+      document.getElementById("placeholderName").setAttribute("value", name);
+      document
+        .getElementById("placeholderSurname")
+        .setAttribute("value", surname);
+      document.getElementById("placeholderEmail").setAttribute("value", email);
+    };
+  </script>
+</html>
