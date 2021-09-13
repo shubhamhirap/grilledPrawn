@@ -30,8 +30,21 @@
               <a href="#">DECORATIONS</a>
               <a href="#">ABOUT THE GRILLED PRAWN</a>
             </nav>
+            <div class="hamburger__iconContainer" onclick="mobileMenuAction()">
+              <img
+                class="hamburgerIcon"
+                src="./assets/icons/menu.png"
+                alt="menu icon"
+              />
+            </div>
           </div>
         </header>
+        <nav class="hamburgerIcon__navList">
+          <a href="#">RECIPES</a>
+          <a href="#">DRINKS</a>
+          <a href="#">DECORATIONS</a>
+          <a href="#">ABOUT THE GRILLED PRAWN</a>
+        </nav>
         <!-- Header End -->
 
         <!-- Banner Start -->
@@ -681,12 +694,27 @@
       let name = document.querySelector("#name").value;
       let surname = document.querySelector("#surname").value;
       let email = document.querySelector("#email").value;
-      
+
       document.getElementById("placeholderName").setAttribute("value", name);
       document
         .getElementById("placeholderSurname")
         .setAttribute("value", surname);
       document.getElementById("placeholderEmail").setAttribute("value", email);
+    };
+
+    const mobileMenuAction = () => {
+      let navMenu = document.getElementsByClassName(
+        "hamburgerIcon__navList"
+      )[0];
+
+      console.log(navMenu);
+
+      if (navMenu.style.display) {
+        navMenu.style.display =
+          navMenu.style.display != "none" ? "none" : "flex";
+      } else {
+        navMenu.style.display = "flex";
+      }
     };
   </script>
 </html>
