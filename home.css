@@ -67,6 +67,13 @@ option {
 .wrapper {
   width: 100%;
   display: flex;
+}
+
+.container {
+  justify-content: center;
+}
+
+.wrapper {
   flex-direction: column;
 }
 
@@ -521,10 +528,7 @@ option {
 
 .newsletter .newsletterWrapper .newsletterWrapper__description p {
   color: #fff;
-  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 2.109rem;
-  letter-spacing: 0.023rem;
 }
 
 .newsletter .newsletterWrapper .newsletterWrapper__form {
@@ -566,10 +570,7 @@ option {
   .newsletterWrapper__formFields
   label {
   color: #fff;
-  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 2.109rem;
-  letter-spacing: 0.023rem;
 }
 
 .newsletter
@@ -639,10 +640,7 @@ option {
   .newsletterWrapper__buttonIconRemove
   .deleteTitle {
   color: #fff;
-  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 2.109rem;
-  letter-spacing: 0.023rem;
 }
 
 .newsletter
@@ -740,4 +738,298 @@ option {
   font-weight: 300;
   line-height: 2.109rem;
   letter-spacing: 0.023rem;
+}
+
+/* tab */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* global */
+
+  .commanText {
+    font-size: 1.5rem;
+    line-height: 1.809rem;
+    letter-spacing: 0.023rem;
+  }
+
+  input[type="checkbox"]:not(:checked) + label:after,
+  input[type="checkbox"]:checked + label:after {
+    top: 7px;
+    left: -2.8rem;
+    font-size: 1.5rem;
+  }
+  /*  */
+
+  .banner__recipeDescription .recipe_title {
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+  }
+
+  .banner__recipeDescription .recipe_description {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 2.8rem;
+  }
+
+  .banner__recipeDescription .recipeButton {
+    width: 80%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+  }
+
+  /* recipe */
+
+  .recipe
+    .recipeWrapper
+    .recipeWrapper__tabs
+    .recipeWrapper__tabsFilterSort
+    button {
+    width: 20.9rem;
+    padding: 1.2rem 1.2rem 3rem 1.2rem;
+  }
+
+  .recipe
+    .recipeWrapper
+    .recipeWrapper__tabs
+    .recipeWrapper__tabsFilterSort
+    .recipeWrapper__tabSort {
+    margin-left: 1.5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .recipe .recipeWrapper .recipeWrapper__cards {
+    justify-content: space-between;
+  }
+
+  .recipe .recipeWrapper .recipeWrapper__cards .recipeWrapper__card {
+    width: 32rem;
+  }
+
+  .inputGroup label {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  /* newsletter */
+
+  .newsletter .newsletterWrapper .newsletterWrapper__description {
+    width: 50%;
+  }
+
+  .newsletter .newsletterWrapper .newsletterWrapper__form {
+    width: 100%;
+  }
+
+  .newsletter
+    .newsletterWrapper
+    .newsletterWrapper__form
+    .newsletterWrapper__formWrapper
+    .newsletterWrapper__formFields {
+    width: 10%;
+  }
+
+  .newsletter
+    .newsletterWrapper
+    .newsletterWrapper__form
+    .newsletterWrapper__formWrapper
+    .newsletterWrapper__formFields
+    input {
+    height: 4rem;
+    font-size: 1.5rem;
+    line-height: 1.809rem;
+  }
+
+  .newsletter
+    .newsletterWrapper
+    .newsletterWrapper__form
+    .newsletterWrapper__formWrapper
+    .newsletterWrapper__buttonIcon
+    button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.809rem;
+    padding: 1.8rem 3rem;
+  }
+
+  .newsletter .newsletterWrapper .newsletterWrapper__sendButton button {
+    padding: 1.2rem 4.5rem;
+    font-size: 1.5rem;
+    line-height: 1.809rem;
+  }
+
+  /* footer */
+
+  .footer .footerWrapper {
+    gap: 5rem;
+  }
+
+  .footer .footerWrapper .footerWrapper__footerList {
+    gap: 2rem;
+  }
+
+  .footerListTitle {
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.109rem;
+    letter-spacing: 0.02rem;
+  }
+  .footerListDescription {
+    font-size: 1.2rem;
+    line-height: 1.39rem;
+    letter-spacing: 0.018rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .recipe .recipeWrapper .recipeWrapper__cards .recipeWrapper__card {
+    width: 28rem;
+  }
+}
+
+/* mobile devices */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 540px) {
+  /* header */
+
+  .header {
+    height: 70px;
+  }
+
+  .header__brandWrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  /* banner */
+  .banner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner__imageContainer {
+    height: 100%;
+    flex: 0;
+  }
+
+  .banner__imageWrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .banner__recipeDescription {
+    width: 100%;
+    flex: 0;
+    padding: 4rem 2rem 3.5rem 2rem;
+  } */
+
+  .banner__recipeDescription .recipe_title {
+    font-size: 3.5rem;
+    line-height: 4.447rem;
+  }
+
+  /* recipe */
+
+  .recipe .recipeWrapper .recipeWrapper__tabs {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .recipe .recipeWrapper .recipeWrapper__tabs .recipeWrapper__tabsFilterSort {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .recipe
+    .recipeWrapper
+    .recipeWrapper__tabs
+    .recipeWrapper__tabsFilterSort
+    .recipeWrapper__tabSort {
+    margin-left: 0;
+  }
+
+  .recipe .recipeWrapper .recipeWrapper__cards {
+    justify-content: center;
+  }
+
+  .recipe .recipeWrapper .recipeWrapper__filterOptions {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 5rem;
+    background-color: #e9474b;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+
+  .recipe
+    .recipeWrapper
+    .recipeWrapper__filterOptions
+    .filterOptions__foodType {
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2rem;
+  }
+
+  .recipe
+    .recipeWrapper
+    .recipeWrapper__filterOptions
+    .filterOptions__nationality
+    .filterOptions__nationalityOptions {
+    flex-direction: column;
+  }
+
+  .recipe
+    .recipeWrapper
+    .recipeWrapper__filterOptions
+    .filterOptions__nationality
+    .filterOptions__nationalityOptions
+    .nationality_column {
+    flex-direction: column;
+    padding-bottom: 1.3rem;
+  }
+
+  .recipe .recipeWrapper .recipeWrapper__cards .recipeWrapper__card {
+    width: 30rem;
+  }
+
+  /* newsletter */
+  .newsletter .newsletterWrapper .newsletterWrapper__description {
+    width: 100%;
+    margin: 1.6rem 0 3.3rem 0;
+  }
+
+  .newsletter
+    .newsletterWrapper
+    .newsletterWrapper__form
+    .newsletterWrapper__formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    gap: 3rem;
+  }
+
+  /* footer */
+  .footer .footerWrapper {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .footer .footerWrapper .footerWrapper__footerList {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
